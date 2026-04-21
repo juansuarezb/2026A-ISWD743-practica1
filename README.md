@@ -214,24 +214,20 @@ Salida: Generación de un archivo XML/JSON con los resultados finales.
 
 >[!WARNING]
 >
-> **ES NECESARIO realizar la [descarga del Microsoft JDBC Driver para SQL Server](https://learn.microsoft.com/es-es/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver17) para conectarnos al servidor de SQL**
+> **ES NECESARIO realizar la [descarga del Microsoft JDBC Driver para SQL Server](https://learn.microsoft.com/es-es/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver17) para conectarnos al servidor de SQL**<br><br>
 > Desde el sitio oficial de microsoft descargamos el archivo .zip para poder tener acceso al .jar (librería) y establecer conexión.<br>
-> [JDBC](CapturasSQL/8.png) <br>
+> ![JDBC](CapturasSQL/8.png)<br><br>
 > Al descromprimir el archivo descargado debemos de copiar el archivo "mssql-jdbc-13.4.0.jre11" que se encuentra en la ruta de la imagen hacia la ruta donde se encuentran las librerias de Pentaho
-> [mssql-jdbc-13.4.0.jre11](CapturasSQL/9.png) <br>
+> ![mssql-jdbc-13.4.0.jre11](CapturasSQL/9.png)<br><br>
 > data-integration\lib
-> [data-integration\lib](CapturasSQL/10.png) <br>
+> ![data-integration\lib](CapturasSQL/10.png)<br><br>
 > A continuación, es necesario cerrar el programa y volver a ejecutar el archivo por lotes para aplicar efecto.
 
-Primero, desde la vista "View" es necesario crear una conexión a una base de datos para poder obtener los registros del servidor empaquetado en el contenedor. Así, seleccionamos la opción de Database connections -> New y se nos presentará una ventana para seleccionar el tipo de motor de base de datos necesario. <br>
+Primero, desde la vista "View" es necesario crear una conexión a una base de datos para poder obtener los registros del servidor empaquetado en el contenedor. Así, seleccionamos la opción de Database connections -> New y se nos presentará una ventana para seleccionar el tipo de motor de base de datos necesario.<br>
+![VentanaConfiguracionConexion](CapturasSQL/6.png)<br><br>
+Luego, debemos de nombrar a la conexión "sql.containter" en este caso, ingresamos el host name (localhost), el nombre de la base de datos, puerto que se mapeo al momento de crear el contenedor, usuario (sa) y contraseña.<br>
 
-**Captura:**
-![VentanaConfiguracionConexion](CapturasSQL/6.png) <br>
-
-Primero, debemos de nombrar a la conexión "sql.containter" en este caso, ingresamos el host name (localhost), el nombre de la base de datos, puerto que se mapeo al momento de crear el contenedor, usuario (sa) y contraseña.
-
-**Captura:**
-![VentanaConfiguracionConexion2](CapturasSQL/7.png) <br>
+![VentanaConfiguracionConexion2](CapturasSQL/7.png)<br><br>
 
 >[!WARNING]
 > A continuación, en el menú de "Options" pasamos a configurar algúnos parámetros necesarios para el correcto funcionamiento de la conexión". Agregamos un parámetro key:{driverClass}, value:{com.microsoft.sqlserver.jdbc.SQLServerDriver} y otro para key:{driverClass}, value:{com.microsoft.sqlserver.jdbc.SQLServerDriver}.<br>

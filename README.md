@@ -1,8 +1,15 @@
 # 2026A-ISWD743-practica1
+# Práctica Pentaho ETL
 ![Business Intelligence](https://img.shields.io/badge/Business_Intelligence-FF6C37?style=for-the-badge&logo=power-bi&logoColor=white)
 ![EPN](https://img.shields.io/badge/Escuela_Politécnica_Nacional-003366?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJMMiA3bDEwIDUgMTAtNS0xMC01ek0yIDE3bDEwIDUgMTAtNU0yIDEybDEwIDUgMTAtNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+&logoColor=white)
 ![Facultad de Ingeniería en Sistemas](https://img.shields.io/badge/FIS-Facultad_Ingeniería_Sistemas-003366?style=for-the-badge)
-# Práctica Pentaho ETL
+
+# Integrantes
+[![Andrea Chicaiza](https://img.shields.io/badge/Andrea_Chicaiza-andrea--m11-181717?style=for-the-badge&logo=github)](https://github.com/andrea-m11)<br><br>
+[![Andreina](https://img.shields.io/badge/Andreina-Andreina--P-181717?style=for-the-badge&logo=github)](https://github.com/Andreina-P)<br><br>
+[![Jose Arias](https://img.shields.io/badge/Jose_Arias-JoseDA0721-181717?style=for-the-badge&logo=github)](https://github.com/JoseDA0721)<br><br>
+[![Juan Mateo Quisilema](https://img.shields.io/badge/Juan_Mateo-JuanMateoQ-181717?style=for-the-badge&logo=github)](https://github.com/JuanMateoQ)<br><br>
+[![Juan Suarez](https://img.shields.io/badge/Juan_Suarez-juansuarezb-181717?style=for-the-badge&logo=github)](https://github.com/juansuarezb)<br><br>
 
 >[!NOTE]
 >
@@ -122,11 +129,31 @@ Se cargaron datos XML y se ordenaron según un criterio definido.
 ### 5. Table Input → Calculator → Output
 
 **Descripción:**
-Se extrajeron datos desde una base de datos y se realizaron cálculos sobre los mismos.
+Por último, se procederá a crear un entorno dockerizado para desplegar un contenedor para el SGBD (Sistema Gestor de Base de Datos) SQL Server 2025. Para ello es necesario tener instalado Docker Desktop para una mejor gestión de los contenedores. Así, se muestra a continuación la interfaz esperada al iniciar el software: 
 
 **Captura:**
-![db](capturas/db.png)
+![DockerDesktop](CapturasSQL/1.png)
 
+A continuación, es necesario crear un contenedor a partir de la imagen de SQL Server disponible en Docker Hub. Es necesario configurar algunas variables de entorno para el correcto funcionamiento del contenedor. 
+
+## Levantar SQL Server con Docker
+
+```bash
+docker run -d \
+  --name sqlserver2025 \
+  --hostname sqlserver2025 \
+  -e ACCEPT_EULA=Y \
+  -e MSSQL_SA_PASSWORD=MiPassword123! \
+  -e MSSQL_PID=Developer \
+  -p 1433:1433 \
+  -v sqlserver2025_data:/var/opt/mssql \
+  mcr.microsoft.com/mssql/server:2025-latest
+```
+
+Así, tendremos levantado el contenedor de SQL Server como se muestra a continuación:
+
+**Captura:**
+![sqlserver-container](CapturasSQL/2.png)
 ---
 
 ## Resultados
@@ -142,8 +169,3 @@ Se extrajeron datos desde una base de datos y se realizaron cálculos sobre los 
 El uso de Pentaho facilita la automatización de procesos ETL, permitiendo integrar y transformar datos de diversas fuentes para su posterior análisis en sistemas de Business Intelligence.
 
 ---
-
-## Autores
-
-Juan Diego Suarez
-

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 101,
+    "producto": "Laptop Gamer Pro",
+    "categoria": "Computadoras",
+    "precio": 1200.50,
+    "stock": 15,
+    "estado": "disponible"
+  },
+  {
+    "id": 102,
+    "producto": "Mouse Inalámbrico",
+    "categoria": "Accesorios",
+    "precio": 25.00,
+    "stock": 150,
+    "estado": "disponible"
+  },
+  {
+    "id": 103,
+    "producto": "Monitor 4K 27''",
+    "categoria": "Computadoras",
+    "precio": 350.00,
+    "stock": 0,
+    "estado": "agotado"
+  },
+  {
+    "id": 104,
+    "producto": "Teclado Mecánico RGB",
+    "categoria": "Accesorios",
+    "precio": 85.99,
+    "stock": 45,
+    "estado": "disponible"
+  },
+  {
+    "id": 105,
+    "producto": "Disco Duro Externo 2TB",
+    "categoria": "Almacenamiento",
+    "precio": 65.00,
+    "stock": 20,
+    "estado": "disponible"
+  },
+  {
+    "id": 106,
+    "producto": "Memoria RAM 16GB",
+    "categoria": "Componentes",
+    "precio": 55.00,
+    "stock": 5,
+    "estado": "disponible"
+  }
+]

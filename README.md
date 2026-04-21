@@ -104,14 +104,80 @@ Aquí se muestra el flujo completo desde la lectura hasta la escritura:
 
 ---
 
-### 3. JSON Input → Select Values → Output
+### 3. JSON Input → Select Values → Excel Output
 
-**Descripción:**
-Se procesaron datos en formato JSON, seleccionando campos relevantes para análisis.
+>**Objetivo:**
+- Utilizar un archivo JSON como fuente de datos para aplicar la transformación **Select Values**, permitiendo organizar de mejor manera el esquema final de los datos, y posteriormente exportar los datos procesados a un nuevo archivo Excel.
 
-**Captura:**
-![json](capturas/json.png)
 
+>**Dataset utilizado:**
+* **Archivo:** `datos_practica_json.json`
+* **Campos:** `id`, `producto`, `categoria`, `precio`, `stock`, `estado`.
+
+
+>**Descripción:**
+
+1. **Importación de datos:** Se importaron datos desde un archivo JSON de inventario de una tienda.
+   * **1.1.** Se abre la carpeta `Input`, se busca el paso `JSON input` y se arrastra al área de trabajo para luego poder cargar el archivo `.json`.
+
+     | ![Input JSON](CapturasJSON/json/1input_json.png) |
+     | :---: |
+     | *Figura 1: Selección de Input JSON* |
+
+2. En la opción **Edit** del paso `JSON input` que se encuentra en el área de trabajo:
+   * **2.1.** En la pestaña `File`, mediante el botón `Browse`, se selecciona el archivo JSON y se da clic en `Add` para que aparezca dentro de la lista `Selected files`.
+
+     | ![Input JSON](CapturasJSON/json/2agregar_filejson.png) |
+     | :---: |
+     | *Figura 2: Carga del archivo de origen* |
+
+   * **2.2.** En la pestaña `Fields`, se definen los campos mediante la selección de todos los elementos dentro de la opción `Select Fields`.
+
+     | ![Input JSON](CapturasJSON/json/3fieldjson.png) |
+     | :---: |
+     | *Figura 3: Definición de campos JSON* |
+
+     Luego de dar clic en **OK**, en esta pestaña se podrán visualizar todos los campos del JSON. Además, antes de guardar los cambios, se renombra el paso `JSON input` por `Staging (JSON)`.
+
+     | ![Input JSON](CapturasJSON/json/4fieldsagregado.png) |
+     | :---: |
+     | *Figura 4: Campos agregados exitosamente* |
+
+3. **Transformación de datos:** Se abre la carpeta `Transform`, se busca el paso `Select values` y se arrastra al área de trabajo para luego editar su nombre a `CALIDAD DE DATOS`.
+
+     | ![Input JSON](CapturasJSON/json/5transform.png) |
+     | :---: |
+     | *Figura 5: Agregando paso de transformación* |
+
+   * **3.1.** En la pestaña `Select & Alter`, se da clic en `Get fields to select` y se renombran los campos según lo que se requiera, como se observa en la Figura 6.
+
+     | ![Input JSON](CapturasJSON/json/7renamecolumnas.png) |
+     | :---: |
+     | *Figura 6: Renombrado de columnas para el reporte* |
+
+   * **3.2.** En la pestaña `Remove`, se especifica el nombre del campo que se desee eliminar o, mediante `Get fields to remove`, se selecciona el campo `id`, el cual no serviría en el reporte final.
+
+     | ![Input JSON](CapturasJSON/json/8removefield.png) |
+     | :---: |
+     | *Figura 7: Eliminación de campos innecesarios* |
+
+4. **Configuración de salida:** Se abre la carpeta `Output`, se busca el paso `Microsoft Excel writer` y se arrastra al área de trabajo.
+
+     | ![Input JSON](CapturasJSON/json/9output.png) |
+     | :---: |
+     | *Figura 8: Selección del formato de salida* |
+
+   * **4.1.** En la pestaña `File & Sheet`, mediante `Browse` o de manera manual, se coloca la dirección del directorio y el nombre del archivo de salida deseado.
+
+     | ![Input JSON](CapturasJSON/json/10archivosalida.png) |
+     | :---: |
+     | *Figura 9: Definición de la ruta de salida* |
+
+5. **Ejecución del flujo:** Con el flujo estructurado de la siguiente manera: `Staging (JSON)` -> `CALIDAD DE DATOS` -> `Microsoft Excel writer`. Se da clic en el botón **Play** para ejecutar la transformación, lo cual genera el archivo Excel con la salida esperada.
+
+     | ![Input JSON](CapturasJSON/json/11ejecucion.png) |
+     | :---: |
+     | *Figura 10: Ejecución exitosa de la transformación* |
 ---
 ### 4. XML Input → Split Fields → Excel Output
 ---

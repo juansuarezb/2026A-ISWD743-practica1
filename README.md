@@ -39,13 +39,49 @@ Se cargaron datos desde un archivo Excel, se realizó limpieza de texto y se exp
 
 ---
 
-### 2. CSV Input → Filter Rows → Text Output
+### 2. CSV Input → String Operation (Upper) → Text Output
+
+#### Dataset Utilizado
+* **Archivo:** `babyNamesUSYOB-full.csv`
+* **Campos:** `YearOfBirth`, `Name`, `Sex`, `Number`.
 
 **Descripción:**
-Se importaron datos desde un archivo CSV y se filtraron registros según condiciones específicas.
+#### Paso 1: Extracción (Input)
+Se configuró un paso de **CSV file input** para leer el archivo original. Se definió el delimitador por coma (`,`) y se obtuvieron los campos con sus respectivos tipos de datos (Integer para el año y cantidad, String para el nombre y sexo).
 
-**Captura:**
-![csv](capturas/csv.png)
+#### Paso 2: Transformación (String Operations)
+Para normalizar la información, se utilizó el paso **String operations**. Se seleccionó la columna `Name` y se aplicó la transformación **Upper** para convertir todos los nombres de minúsculas a **MAYÚSCULAS**.
+
+### Paso 3: Carga (Output)
+Los datos transformados se enviaron a un archivo de salida llamado `Salida.csv` mediante el paso **Text file output**. En la configuración de salida:
+* Se cambió el separador a punto y coma (`;`).
+* Se forzó la inclusión de los nuevos campos transformados en la pestaña *Fields*.
+
+#### Evidencias del Proceso
+
+##### Diseño de la Transformación en Spoon
+Aquí se muestra el flujo completo desde la lectura hasta la escritura:
+![Diseño ETL](./Capturas%20csv/Captura%20de%20pantalla%202026-04-21%20083251.png)
+
+##### Configuración de Input
+![Configuración Input](./Capturas%20csv/Captura%20de%20pantalla%202026-04-21%20082102.png)
+
+##### Configuración de la Transformación de Texto
+![Configuración String Ops](./Capturas%20csv/Captura%20de%20pantalla%202026-04-21%20082836.png)
+
+##### Configuración Output
+![Configuración Output](./Capturas%20csv/Captura%20de%20pantalla%202026-04-21%20083246.png)
+
+##### Vista Previa de los Datos (Preview)
+![Preview Datos](./Capturas%20csv/Captura%20de%20pantalla%202026-04-21%20084443.png)
+
+##### Vista posterior a la transformación
+
+![Final Datos](./Capturas%20csv/Captura%20de%20pantalla%202026-04-21%20084433.png)
+
+#### Resultados
+* **Archivo Original:** Los nombres presentaban un formato de tipo título (ej. "Mary").
+* **Archivo de Salida:** Los nombres se encuentran totalmente en mayúsculas (ej. "MARY"), listos para ser procesados en un Data Warehouse.
 
 ---
 

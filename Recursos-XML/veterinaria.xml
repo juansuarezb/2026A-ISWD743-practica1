@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<veterinaria nombre="Clínica Veterinaria PetCare">
+    <mascotas>
+
+        <mascota>
+            <id>VET-A001</id>
+            <nombre_mascota>Luna</nombre_mascota>
+            <especie>Perro</especie>
+            <raza>Labrador</raza>
+            <edad_anios>3</edad_anios>
+            <peso_kg>28.5</peso_kg>
+            <nombre_propietario>Carlos Mendoza</nombre_propietario>
+            <telefono>0991234567</telefono>
+            <fecha_consulta>2024-01-15</fecha_consulta>
+            <diagnostico>Control rutinario</diagnostico>
+            <veterinario>Dr. Ramírez</veterinario>
+        </mascota>
+
+        <mascota>
+            <id>VET-B002</id>
+            <nombre_mascota>Michi</nombre_mascota>
+            <especie>Gato</especie>
+            <raza>Siamés</raza>
+            <edad_anios>2</edad_anios>
+            <peso_kg>4.2</peso_kg>
+            <nombre_propietario>Ana Torres</nombre_propietario>
+            <telefono>0987654321</telefono>
+            <fecha_consulta>2024-01-18</fecha_consulta>
+            <diagnostico>Vacunación anual</diagnostico>
+            <veterinario>Dra. López</veterinario>
+        </mascota>
+
+        <mascota>
+            <id>VET-C003</id>
+            <nombre_mascota>Rocky</nombre_mascota>
+            <especie>Perro</especie>
+            <raza>Bulldog Francés</raza>
+            <edad_anios>5</edad_anios>
+            <peso_kg>12.0</peso_kg>
+            <nombre_propietario>Jorge Villamar</nombre_propietario>
+            <telefono>0976543210</telefono>
+            <fecha_consulta>2024-02-03</fecha_consulta>
+            <diagnostico>Otitis externa</diagnostico>
+            <veterinario>Dr. Ramírez</veterinario>
+        </mascota>
+
+        <mascota>
+            <id>VET-D004</id>
+            <nombre_mascota>Bella</nombre_mascota>
+            <especie>Perro</especie>
+            <raza>Golden Retriever</raza>
+            <edad_anios>1</edad_anios>
+            <peso_kg>22.3</peso_kg>
+            <nombre_propietario>María Salinas</nombre_propietario>
+            <telefono>0965432109</telefono>
+            <fecha_consulta>2024-02-10</fecha_consulta>
+            <diagnostico>Primera desparasitación</diagnostico>
+            <veterinario>Dra. López</veterinario>
+        </mascota>
+
+        <mascota>
+            <id>VET-E005</id>
+            <nombre_mascota>Paco</nombre_mascota>
+            <especie>Loro</especie>
+            <raza>Amazona</raza>
+            <edad_anios>7</edad_anios>
+            <peso_kg>0.45</peso_kg>
+            <nombre_propietario>Luis Guerrero</nombre_propietario>
+            <telefono>0954321098</telefono>
+            <fecha_consulta>2024-02-20</fecha_consulta>
+            <diagnostico>Revisión de plumaje</diagnostico>
+            <veterinario>Dr. Mora</veterinario>
+        </mascota>
+
+        <mascota>
+            <id>VET-F006</id>
+            <nombre_mascota>Nemo</nombre_mascota>
+            <especie>Pez</especie>
+            <raza>Pez payaso</raza>
+            <edad_anios>1</edad_anios>
+            <peso_kg>0.02</peso_kg>
+            <nombre_propietario>Sofía Castillo</nombre_propietario>
+            <telefono>0943210987</telefono>
+            <fecha_consulta>2024-03-05</fecha_consulta>
+            <diagnostico>Infección fúngica</diagnostico>
+            <veterinario>Dr. Mora</veterinario>
+        </mascota>
+
+        <mascota>
+            <id>VET-G007</id>
+            <nombre_mascota>Max</nombre_mascota>
+            <especie>Perro</especie>
+            <raza>Pastor Alemán</raza>
+            <edad_anios>4</edad_anios>
+            <peso_kg>34.7</peso_kg>
+            <nombre_propietario>Roberto Espinoza</nombre_propietario>
+            <telefono>0932109876</telefono>
+            <fecha_consulta>2024-03-12</fecha_consulta>
+            <diagnostico>Displasia de cadera leve</diagnostico>
+            <veterinario>Dr. Ramírez</veterinario>
+        </mascota>
+
+        <mascota>
+            <id>VET-H008</id>
+            <nombre_mascota>Cleo</nombre_mascota>
+            <especie>Gato</especie>
+            <raza>Persa</raza>
+            <edad_anios>6</edad_anios>
+            <peso_kg>5.1</peso_kg>
+            <nombre_propietario>Patricia Reyes</nombre_propietario>
+            <telefono>0921098765</telefono>
+            <fecha_consulta>2024-03-22</fecha_consulta>
+            <diagnostico>Limpieza dental</diagnostico>
+            <veterinario>Dra. López</veterinario>
+        </mascota>
+
+        <mascota>
+            <id>VET-I009</id>
+            <nombre_mascota>Tomy</nombre_mascota>
+            <especie>Conejo</especie>
+            <raza>Enano holandés</raza>
+            <edad_anios>2</edad_anios>
+            <peso_kg>1.8</peso_kg>
+            <nombre_propietario>Diego Muñoz</nombre_propietario>
+            <telefono>0910987654</telefono>
+            <fecha_consulta>2024-04-01</fecha_consulta>
+            <diagnostico>Esterilización</diagnostico>
+            <veterinario>Dr. Mora</veterinario>
+        </mascota>
+
+        <mascota>
+            <id>VET-J010</id>
+            <nombre_mascota>Nina</nombre_mascota>
+            <especie>Perro</especie>
+            <raza>Chihuahua</raza>
+            <edad_anios>8</edad_anios>
+            <peso_kg>2.9</peso_kg>
+            <nombre_propietario>Valeria Herrera</nombre_propietario>
+            <telefono>0909876543</telefono>
+            <fecha_consulta>2024-04-08</fecha_consulta>
+            <diagnostico>Control cardíaco</diagnostico>
+            <veterinario>Dr. Ramírez</veterinario>
+        </mascota>
+
+    </mascotas>
+</veterinaria>

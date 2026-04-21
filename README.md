@@ -115,14 +115,65 @@ Se procesaron datos en formato JSON, seleccionando campos relevantes para análi
 ![json](capturas/json.png)
 
 ---
+### 4. XML Input → Split Fields → Excel Output
+---
 
-### 4. XML Input → Sort Rows → Output
+>**Objetivo:**
+- Utilizar un archivo XML como fuente de datos para aplicar la transformación **Split Fields**, permitiendo dividir un campo compuesto en dos campos independientes, y posteriormente exportar los datos procesados a un nuevo archivo Excel.
+  
+>**Dataset utilizado:**
+- **Archivo de uso académico:** veterinaria.xml (disponible en la sección de recursos XML del repositorio de la práctica)
+- **Campos:** ID, NOMBRE_MASCOTA, ESPECIE, RAZA, EDAD_AÑOS, PESO_KG, NOMBRE_PROPIETARIO, TELEFONO, FECHA_CONSULTA, DIAGNOSTICO, VETERINARIO.
 
-**Descripción:**
-Se cargaron datos XML y se ordenaron según un criterio definido.
+>**Procedimiento:**
+1. Se importaron datos desde un archivo XML, correspondientes a registros de consultas veterinarias.
 
-**Captura:**
-![xml](capturas/xml.png)
+    | ![alt text](Recursos-XML/XML-img1.png)|
+    | :---: |
+    | *Figura 1: Archivo XML de datos* |
+
+    | ![alt text](Recursos-XML/XML-img2.png)|
+    | :---: |
+    | *Figura 2: Configuración de imput de datos XML* |
+
+    | ![alt text](Recursos-XML/XML-img3.png)|
+    | :---: |
+    | *Figura 3: Preview de los datos XML* |
+
+2. Se utilizó la transformación "Split Fields" para dividir el campo que contiene el nombre completo del propietario en dos campos separados de nombre y apellido. Se utilizó el espacio ' ' como delimitador para realizar la separación.
+
+    | ![alt text](Recursos-XML/XML-img4.png)|
+    | :---: |
+    | *Figura 4: Configuración de la transformación de datos XML Split Fields de nombre y apellido de propietario* |
+
+
+3. Después, se configuró el output para exportar los datos procesados a un nuevo archivo Excel.
+
+    | ![alt text](Recursos-XML/XML-img5.png)|
+    | :---: |
+    | *Figura 5: Configuración de output a archivo Excel* |
+
+
+4. Finalmente, se ejecutó la transformación para procesar los datos y generar el archivo Excel con la transformación aplicada.
+
+    | ![alt text](Recursos-XML/XML-img6.png)|
+    | :---: |
+    | *Figura 6: Ejecución de la transformación* |
+
+
+5. El resultado final es un archivo Excel con los datos procesados, donde se pueden observar claramente los campos separados de nombre y apellido del propietario.
+
+    | ![alt text](Recursos-XML/XML-img7.png)|
+    | :---: |
+    | *Figura 7: Resultado de la transformación "Split Fields"* |
+
+>**Comparación de datos antes y después de la transformación "Split Fields":**
+
+| ![alt text](Recursos-XML/XML-img8.png) | ![alt text](Recursos-XML/XML-img9.png) |
+| :---: | :---: |
+| *Figura 8: Datos antes de la transformación* | *Figura 9: Datos después de la transformación* |
+
+**Resultado:** Como se puede observar en la comparación, el campo "NOMBRE_PROPIETARIO" que contenía el nombre completo del propietario de la mascota (ej."Ana Torres") ha sido dividido correctamente en dos campos separados: "NOMBRE" y "APELLIDO" (ej. "Ana" y "Torres"), facilitando así el análisis y manejo de los datos.
 
 ---
 

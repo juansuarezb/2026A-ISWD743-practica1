@@ -1,10 +1,10 @@
+<div align="center">
+  
 # 2026A-ISWD743-practica1
-# Práctica Pentaho ETL
-![Business Intelligence](https://img.shields.io/badge/Business_Intelligence-FF6C37?style=for-the-badge&logo=power-bi&logoColor=white)
-![EPN](https://img.shields.io/badge/Escuela_Politécnica_Nacional-003366?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJMMiA3bDEwIDUgMTAtNS0xMC01ek0yIDE3bDEwIDUgMTAtNU0yIDEybDEwIDUgMTAtNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+&logoColor=white)
-![Facultad de Ingeniería en Sistemas](https://img.shields.io/badge/FIS-Facultad_Ingeniería_Sistemas-003366?style=for-the-badge)
+### Práctica Pentaho ETL
+  
+</div>
 
-# Integrantes
 [![Andrea Chicaiza](https://img.shields.io/badge/Andrea_Chicaiza-andrea--m11-181717?style=for-the-badge&logo=github)](https://github.com/andrea-m11)<br><br>
 [![Andreina](https://img.shields.io/badge/Andreina-Andreina--P-181717?style=for-the-badge&logo=github)](https://github.com/Andreina-P)<br><br>
 [![Jose Arias](https://img.shields.io/badge/Jose_Arias-JoseDA0721-181717?style=for-the-badge&logo=github)](https://github.com/JoseDA0721)<br><br>
@@ -13,32 +13,32 @@
 
 >[!NOTE]
 >
-> Descripción: <br>
-> * Implementación de procesos ETL utilizando Pentaho Data Integration (PDI - Spoon), trabajando con diferentes tipos de entrada (Input) y transformaciones para el procesamiento de datos.
+> Este repositorio contiene la implementación de diversos flujos de Extracción, Transformación y Carga (ETL) utilizando Pentaho Data Integration (PDI). El objetivo principal es demostrar la capacidad de procesar datos heterogéneos (Excel, CSV, JSON, XML y SQL) para convertirlos en información estructurada y lista para el análisis.
 
 ---
 
 >[!NOTE]
 >
-> Objetivos:
+> Objetivos específicos:
 > * Comprender el proceso ETL (Extract, Transform, Load)
-> * Trabajar con múltiples fuentes de datos
+> * Trabajar con múltiples fuentes de datos (Interoperabilidad)
 > * Aplicar transformaciones para limpieza y procesamiento
 > * Generar salidas estructuradas
+> * Escalabilidad: Implementación de entornos de base de datos mediante contenedores (Docker).
 
 ---
 
 >[!IMPORTANT]
-> Tecnologías utilizadas:
-> * Pentaho Data Integration (Spoon)
+> Stack Tecnológico
+> * Pentaho Data Integration (Spoon) 10.2.0.0-222.zip - ETL Tool: <br>
 >   ![Pentaho](https://img.shields.io/badge/Pentaho-FF8C00?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJMNyA3bDUgNSA1LTV6TTcgMTdsNSA1IDUtNXoiIGZpbGw9IndoaXRlIi8+PC9zdmc+&logoColor=white)
-> * Java JDK
-> ![Java JDK](https://img.shields.io/badge/Java_JDK-18.0.0-007396?style=for-the-badge&logo=java&logoColor=white)
-> * SQL Server Managamente Studio 22
+> * Java JDK 18.0.2.1 - Runtime <br>
+> ![Java JDK](https://img.shields.io/badge/Java_JDK-18.0.2.1-007396?style=for-the-badge&logo=java&logoColor=white)
+> * SQL Server Management Studio (SSMS) 22 - Management <br>
 > ![SSMS](https://img.shields.io/badge/SSMS-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
-> * Docker
+> * Docker - DevOps <br>
 > ![Docker](https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-> * Github
+> * Github  DevOps <br>
 > ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 > * Archivos: Excel, CSV, JSON, XML, Tablas de Bases de datos SQL
 > ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
@@ -206,6 +206,29 @@ Así, tendremos levantado el contenedor de SQL Server como se muestra a continua
 **Captura:**
 ![sqlserver-container](CapturasSQL/2.png)
 ---
+
+Este flujo conecta el entorno dockerizado con Pentaho
+
+Lectura: Extracción de registros de la tabla Ventas en SQL Server.
+Transformación: Seleccionar elementos de la tabla (columnas)
+Salida: Generación de un archivo XML/JSON con los resultados finales.
+
+
+Primero, es necesario crear una conexión a una base de datos para poder obtener los registros del servidor empaquetado en el contenedor. Así, seleccionamos la opción de Database connections -> New y se nos presentará una ventana para seleccionar el tipo de motor de base de datos necesario. <br>
+
+**Captura:**
+![VentanaConfiguracionConexion](CreacionNuevaTransformacion/6.png) <br>
+
+Primero, debemos de nombrar a la conexión "sql.containter" en este caso, ingresamos el host name (localhost), el nombre de la base de datos, puerto que se mapeo al momento de crear el contenedor, usuario (sa) y contraseña.
+
+**Captura:**
+![VentanaConfiguracionConexion2](CreacionNuevaTransformacion/7.png) <br>
+
+A continuación, en el menú de "Options" pasamos a configurar algúnos parámetros necesarios para el correcto funcionamiento de la conexión"
+
+Así, procedemos a crear una nueva transformación desde el menú superior.<br>
+**Captura:**
+![resultado](CreacionNuevaTransformacion/5.png) <br>
 
 Después de ejecutar el comando para iniciar el proceso, observamos el correcto funcionamiento del flujo en los logs (Execution results) que presenta el sistema. Se observa que la transformación ha terminado correctamente y se procede a buscar el archivo en la ruta correspondiente.
 

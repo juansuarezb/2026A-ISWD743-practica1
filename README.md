@@ -51,10 +51,45 @@
 ### 1. Excel Input → Replace in String → Excel Output
 
 **Descripción:**
-Se cargaron datos desde un archivo Excel, se realizó limpieza de texto y se exportó el resultado.
+***Práctica: Carga de datos desde un archivo Excel en Pentaho***
 
-**Captura:**
-![excel](capturas/excel.png)
+***Paso 1: Inicialización de la herramienta***
+
+Navegue hasta el directorio donde extrajo Pentaho Data Integration (PDI).
+Localice y ejecute el archivo Spoon.bat (se recomienda ejecutarlo como administrador para evitar problemas de permisos).
+Espere a que la pantalla de carga finalice y se muestre la interfaz principal de bienvenida ("Welcome Screen").
+
+***Paso 2: Creación de una nueva Transformación***
+
+En la barra de menú superior, diríjase a File > New > Transformation (Archivo > Nuevo > Transformación) o utilice el atajo Ctrl+N.
+Se abrirá un lienzo en blanco en el panel central. Aquí es donde se construirá el flujo de integración de datos.
+
+***Paso 3: Selección del componente de Entrada (Input)***
+
+En el panel lateral izquierdo, asegúrese de estar en la pestaña Design (Diseño).
+Despliegue la carpeta llamada Input.
+Busque el paso llamado Microsoft Excel Input, haga clic sobre él y arrástrelo hacia el lienzo de la transformación.
+
+***Paso 4: Configuración del archivo de origen***
+
+Haga doble clic sobre el ícono de Microsoft Excel Input en el lienzo para abrir su ventana de propiedades.
+En la pestaña Files:
+En el campo Spread sheet type (engine), seleccione el motor adecuado para su archivo. Si es un archivo .xls antiguo, seleccione Excel 97-2003 XLS (JXL).
+Haga clic en el botón Browse... y localice en su computadora el archivo a cargar (por ejemplo, Caso Estudiantes Fechas Cedula.xls).
+Muy importante: Haga clic en el botón Add para que el archivo pase a la lista inferior de Selected files.
+
+***Paso 5: Selección de la hoja de cálculo***
+
+Sin cerrar la ventana de propiedades, cambie a la pestaña Sheets.
+Haga clic en el botón Get sheetname(s).
+En la ventana emergente, seleccione la hoja que contiene los datos (por ejemplo, Hoja1), pásela al cuadro de la derecha ("Your selection") y haga clic en OK.
+
+***Paso 6: Extracción y validación de los campos (Metadata)***
+
+Diríjase a la pestaña Fields.
+Haga clic en el botón inferior Get fields from header row.... Pentaho leerá la primera fila de su archivo Excel para detectar los nombres de las columnas.
+Revise la lista generada asegurándose de que columnas como ID, NOMBRES, APELLIDOS, CEDULA, etc., tengan asignado el tipo de dato correcto en la columna Type (String para textos, Number para números, Date para fechas).
+Haga clic en OK para guardar toda la configuración. El paso de entrada ya está listo para enviar datos al siguiente paso de la transformación.
 
 ---
 

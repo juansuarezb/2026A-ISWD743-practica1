@@ -59,10 +59,12 @@ Navegue hasta el directorio donde extrajo Pentaho Data Integration (PDI).
 Localice y ejecute el archivo Spoon.bat (se recomienda ejecutarlo como administrador para evitar problemas de permisos).
 Espere a que la pantalla de carga finalice y se muestre la interfaz principal de bienvenida ("Welcome Screen").
 
+
 ***Paso 2: Creación de una nueva Transformación***
 
 En la barra de menú superior, diríjase a File > New > Transformation (Archivo > Nuevo > Transformación) o utilice el atajo Ctrl+N.
 Se abrirá un lienzo en blanco en el panel central. Aquí es donde se construirá el flujo de integración de datos.
+![Captura de pantalla 1](CAPTURAS%20EXCEL/Imagen%201.png)
 
 ***Paso 3: Selección del componente de Entrada (Input)***
 
@@ -83,6 +85,7 @@ Muy importante: Haga clic en el botón Add para que el archivo pase a la lista i
 Sin cerrar la ventana de propiedades, cambie a la pestaña Sheets.
 Haga clic en el botón Get sheetname(s).
 En la ventana emergente, seleccione la hoja que contiene los datos (por ejemplo, Hoja1), pásela al cuadro de la derecha ("Your selection") y haga clic en OK.
+![Visualización de BI 8](CAPTURAS%20EXCEL/Imagen%208.png)
 
 ***Paso 6: Extracción y validación de los campos (Metadata)***
 
@@ -90,6 +93,7 @@ Diríjase a la pestaña Fields.
 Haga clic en el botón inferior Get fields from header row.... Pentaho leerá la primera fila de su archivo Excel para detectar los nombres de las columnas.
 Revise la lista generada asegurándose de que columnas como ID, NOMBRES, APELLIDOS, CEDULA, etc., tengan asignado el tipo de dato correcto en la columna Type (String para textos, Number para números, Date para fechas).
 Haga clic en OK para guardar toda la configuración. El paso de entrada ya está listo para enviar datos al siguiente paso de la transformación.
+![Visualización de datos 9](CAPTURAS%20EXCEL/Imagen%209.png)
 
 ---
 

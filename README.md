@@ -1,3 +1,6 @@
+
+<img width="1446" height="555" alt="imagen" src="https://github.com/user-attachments/assets/a39e4b53-9386-43b2-a205-0531247cfc57" />
+
 # 2026A-ISWD743-practica1
 ### Práctica Pentaho ETL
   
